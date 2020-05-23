@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: exchangeConfig
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yyjgit66/qianxian_-config_pro.git
+          username: 18392562566@163.com
+          password: yyj123oo
+          basedir: configfile
+  rabbitmq:
+    port: 5672
+    host: 192.168.101.24
+    username: guest
+    password: guest
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://yyj:yyj@localhost:8762/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

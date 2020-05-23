@@ -1,0 +1,42 @@
+server:
+  port: 8009
+
+spring:
+  application:
+    name: exchangeTest
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/anyouliang_exchange?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  rabbitmq:
+    port: 5672
+    host: 192.168.101.24
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://yyj:yyj@localhost:8762/eureka
+
+seata:
+  enabled: true
+  application-id: test2  #可自定义
+  tx-service-group: my_test_tx_group #可自定义
+  enable-auto-data-source-proxy: true
+  use-jdk-proxy: false
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    grouplist:
+      default: 127.0.0.1:8091
+      disable-global-transaction: false
+  config:
+    type: file
+    file:
+      name: file.conf
+  registry:
+    type: file
+    file:
+      name: file.conf

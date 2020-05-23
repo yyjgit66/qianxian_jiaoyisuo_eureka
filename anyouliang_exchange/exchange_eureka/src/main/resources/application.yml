@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://yyj:yyj@localhost:8762/eureka
+    register-with-eureka: true
+    fetch-registry: false
+
+spring:
+  application:
+    name: exchangeEureka
+  security:
+    user:
+      name: yyj
+      password: yyj
+
+server:
+  port: 8762
+

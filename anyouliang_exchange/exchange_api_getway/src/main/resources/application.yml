@@ -1,0 +1,27 @@
+zuul:
+  sensitive-headers:
+  routes:
+    anyouliang:
+      path: /anyouliang/**
+      serviceId: exchangeModule
+  #ºÚΩ‡–¥∑®
+  #  exchange_module: /myProduct/**
+  #Ω˚÷π∑√Œ µƒ≈‰÷√
+  # ignored-patterns: /**/product/productInfo
+#management:
+#  security:
+#    enabled: false
+
+spring:
+  application:
+    name: api-getway
+
+server:
+  port: 9000
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://yyj:yyj@localhost:8762/eureka
+

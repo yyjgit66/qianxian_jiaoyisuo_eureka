@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: exchangeModule
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: exchangeConfig
+      profile: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://yyj:yyj@localhost:8762/eureka
